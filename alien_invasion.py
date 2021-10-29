@@ -19,9 +19,6 @@ class AlienInvasion:
 
         self.ship = Ship(self)
 
-        # Redraw the screen during each pass through the loop.
-        self.screen.fill(self.settings.bg_color)
-
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -31,6 +28,9 @@ class AlienInvasion:
                     print("event.type is " + str(event.type))
                 if event.type == pygame.QUIT:
                     sys.exit()
+
+                # Redraw the screen during each pass through the loop.
+                self.screen.fill(self.settings.bg_color)
 
                 # Make the most recently drawn screen visible.
                 pygame.display.flip()
