@@ -49,7 +49,7 @@ class AlienInvasion:
         elif event_type == pygame.KEYDOWN:
             result = "KEYDOWN"
         else:
-            result = "DUNNO TYPE"
+            result = "DUNNO TYPE " + str(event_type)
 
         return result
 
