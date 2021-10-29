@@ -17,6 +17,8 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
+        self.ship = Ship(self)
+
         # Redraw the screen during each pass through the loop.
         self.screen.fill(self.settings.bg_color)
 
