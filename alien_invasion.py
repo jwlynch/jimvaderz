@@ -24,6 +24,7 @@ class AlienInvasion:
         while True:
             # Watch for kleybopard and mouse events.
             self._check_events()
+            self.ship.update()
 
             # Redraw the screen during each pass through the loop.
             self._update_screen()
