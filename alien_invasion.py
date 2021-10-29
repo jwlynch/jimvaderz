@@ -17,6 +17,8 @@ class AlienInvasion:
         while True:
             # Watch for kleybopard and mouse events.
             for event in pygame.event.get():
+                if True:
+                    print("event.type is " + event.type)
                 if event.type == pygame.QUIT:
                     sys.exit()
 
