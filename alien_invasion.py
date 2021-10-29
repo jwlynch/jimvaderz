@@ -31,7 +31,7 @@ class AlienInvasion:
     def _check_events(self):
         for event in pygame.event.get():
             if False:
-                print("event.type is " + str(event.type))
+                print("event.type is " + self.evt_type_str(event.type))
                 
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -42,6 +42,16 @@ class AlienInvasion:
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
+
+    def evt_type_str(self, event_type):
+        if event_type == pygame.QUIT:
+            result = "QUIT"
+        elif event_type == pygame.KEYDOWN:
+            result = "KEYDOWN"
+        else:
+            result = "DUNNO TYPE"
+
+        return result
 
 if __name__ == '__main__':
     # Make a game instance, and run the game.
