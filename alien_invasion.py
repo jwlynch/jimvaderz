@@ -12,6 +12,9 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((1200, 800))
         pygame.display.set_caption("Alien Invasion")
 
+        # Set the background color
+        self.bg_color = (230, 230, 230)
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
