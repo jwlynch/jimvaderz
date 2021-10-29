@@ -3,6 +3,7 @@ import sys
 import pygame
 
 from  settings import Settings
+frin ship import Ship
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
