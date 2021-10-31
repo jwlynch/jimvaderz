@@ -82,7 +82,7 @@ class AlienInvasion:
 
     def _create_fleet(self):
         """ Create the fleet of aliens."""
-        # Make an alien.
+        # Make an alien and find the number of aliens in a row.
         alien = Alien(self)
         self.aliens.add(alien)
 
