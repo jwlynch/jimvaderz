@@ -90,11 +90,13 @@ class AlienInvasion:
 
         # Create the first row of aliens.
         for alien_number in range(number_aliens_x):
-            # Create an alien and place it in the row.
-            alien = Alien(self)
-            alien.x = alien_width + 2 * alien_width * alien_number
-            alien.rect.x = alien.x
-            self.aliens.add(alien)
+
+    def _create_alien(self, alien_number):
+        """Create an alien and place it in the row."""
+        alien = Alien(self)
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        self.aliens.add(alien)
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
