@@ -94,6 +94,11 @@ class AlienInvasion:
                               (3 * alien_height) - ship_height)
         number_rows = available_space_y // (2 * alien_height)
 
+        # Create the full fleet of aliens.
+        for row_number in range(number_rows):
+            for alien_number in range(number_aliens_x):
+                self._create_alien(alien_number, row_number)
+
     def _create_alien(self, alien_number, row_number):
         """Create an alien and place it in the row."""
         alien = Alien(self)
