@@ -88,9 +88,6 @@ class AlienInvasion:
         available_space_x = self.settings.screen_width - (2 * alien_width)
         number_aliens_x = available_space_x // (2 * alien_width)
 
-        # Create the first row of aliens.
-        for alien_number in range(number_aliens_x):
-            self._create_alien(alien_number)
 
     def _create_alien(self, alien_number, row_number):
         """Create an alien and place it in the row."""
