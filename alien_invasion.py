@@ -27,12 +27,6 @@ class AlienInvasion:
             # Watch for kleybopard and mouse events.
             self._check_events()
             self.ship.update()
-            self.bullets.update()
-
-            # Get rid of bullets that have disappeared.
-            for bullet in self.bullets.copy():
-                if bullet.rect.bottom <= 0:
-                    self.bullets.remove(bullet)
 
             # Redraw the screen during each pass through the loop.
             self._update_screen()
@@ -69,6 +63,17 @@ class AlienInvasion:
         """Create a new bullet and add it to the bullets group."""
         new_bullet = Bullet(self)
         self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        """Update position of bullets and get rid of old bullets."""
+
+        # UPdate bullet positions
+        self.bullets.update()
+
+        # Get rid of bullets that have disappeared.
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
