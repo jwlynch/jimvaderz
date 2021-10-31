@@ -84,7 +84,9 @@ class AlienInvasion:
         """ Create the fleet of aliens."""
         # Make an alien and find the number of aliens in a row.
         alien = Alien(self)
-        self.aliens.add(alien)
+        alien_width = alien.rect.width
+        available_space_x = self.settings.screen_width - (2 * alien_width)
+        number_aliens_x = available_space_x // (2 * alien_width)
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
